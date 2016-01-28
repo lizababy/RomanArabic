@@ -13,7 +13,9 @@ public class RomanArabicTest {
         assertEquals("III", RomanArabic.toRoman(3));
         assertEquals("IV", RomanArabic.toRoman(4));
         assertEquals("V", RomanArabic.toRoman(5));
-
+        assertEquals("VI", RomanArabic.toRoman(6));
+        assertEquals("VII", RomanArabic.toRoman(7));
+        assertEquals("VIII", RomanArabic.toRoman(8));
 
     }
 }
