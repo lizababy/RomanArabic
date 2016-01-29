@@ -22,24 +22,27 @@ public class RomanArabicTest {
         assertEquals("MCMLXXXIX", RomanArabic.toRoman(1989));
         assertEquals("MCMLIII", RomanArabic.toRoman(1953));
         assertEquals("MMMCCCIII", RomanArabic.toRoman(3303));
+        assertEquals("MMMCMXCIX", RomanArabic.toRoman(3999));
 
     }
     @Test
     public void romanToArabicTest(){
         assertEquals(1, RomanArabic.toArabic("I"));
-        //assertEquals(2, RomanArabic.toArabic("II"));
-        //assertEquals(3, RomanArabic.toArabic("III"));
-        //assertEquals(4, RomanArabic.toArabic("IV"));
+        assertEquals(2, RomanArabic.toArabic("II"));
+        assertEquals(3, RomanArabic.toArabic("III"));
+        assertEquals(4, RomanArabic.toArabic("IV"));
         assertEquals(5, RomanArabic.toArabic("V"));
-        //assertEquals(6, RomanArabic.toArabic("VI"));
-        //assertEquals(7, RomanArabic.toArabic("VII"));
-        //assertEquals(8, RomanArabic.toArabic("VIII"));
-        //assertEquals(9, RomanArabic.toArabic("IX"));
-        //assertEquals(12, RomanArabic.toArabic("XII"));
-        //assertEquals(1066, RomanArabic.toArabic("MLXVI"));
-        //assertEquals(1989, RomanArabic.toArabic("MCMLXXXIX"));
-        //assertEquals(1953, RomanArabic.toArabic("MCMLIII"));
-        //assertEquals(3303, RomanArabic.toArabic("MMMCCCIII"));
+        assertEquals(6, RomanArabic.toArabic("VI"));
+        assertEquals(7, RomanArabic.toArabic("VII"));
+        assertEquals(8, RomanArabic.toArabic("VIII"));
+        assertEquals(9, RomanArabic.toArabic("IX"));
+        assertEquals(12, RomanArabic.toArabic("XII"));
+        assertEquals(1066, RomanArabic.toArabic("MLXVI"));
+        assertEquals(1989, RomanArabic.toArabic("MCMLXXXIX"));
+        assertEquals(1953, RomanArabic.toArabic("MCMLIII"));
+        assertEquals(3303, RomanArabic.toArabic("MMMCCCIII"));
+        assertEquals(3999, RomanArabic.toArabic("MMMCMXCIX"));
+
 
     }
 }
