@@ -8,17 +8,23 @@ public class RomanArabic {
         StringBuilder roman = new StringBuilder();
         int remainder = inputNumber;
 
-        if (remainder >= 5) {
-            roman.append("V");
-            remainder -= 5;
-        }
-        if (remainder == 4) {
-            roman.append("IV");
-            remainder -= 4;
-        }
+        remainder = appendRomanNumerals(remainder, 9, "IX", roman);
+        remainder = appendRomanNumerals(remainder, 5, "V", roman);
+        remainder = appendRomanNumerals(remainder, 4, "IV", roman);
+
         for (int i = 0; i < remainder ; i++){
             roman.append("I");
         }
         return roman.toString();
+    }
+
+    private static int appendRomanNumerals(int remainder,int value, String romanNumeral, StringBuilder roman ){
+
+        if (remainder >= value){
+            roman.append(romanNumeral);
+            remainder -= value;
+        }
+        return remainder;
+
     }
 }
