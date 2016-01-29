@@ -3,14 +3,15 @@
  */
 public class RomanArabic {
 
+    private static final int[] VALUES = {9, 5, 4};
+    private static final String[] ROMAN_NUMERALS = {"IX", "V","IV"};
 
     public static String toRoman(int inputNumber) {
         StringBuilder roman = new StringBuilder();
         int remainder = inputNumber;
-
-        remainder = appendRomanNumerals(remainder, 9, "IX", roman);
-        remainder = appendRomanNumerals(remainder, 5, "V", roman);
-        remainder = appendRomanNumerals(remainder, 4, "IV", roman);
+        for(int i = 0; i < VALUES.length ; i++){
+            remainder = appendRomanNumerals(remainder, VALUES[i], ROMAN_NUMERALS[i], roman);
+        }
 
         for (int i = 0; i < remainder ; i++){
             roman.append("I");
